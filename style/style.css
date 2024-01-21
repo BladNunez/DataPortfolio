@@ -5,6 +5,10 @@ body {
         padding: 0;
         background-color: #f9f9f9; /* Light gray background color */
       }
+
+      img{
+        border-radius: 14px;
+      }
       
       .outer-container {
         max-width: 1200px;
@@ -23,7 +27,9 @@ body {
         margin: 0;
         font-size: 30px;
         color: #ffffff; /* White text color */
+        
       }
+
       
       #links h4 {
         display: inline-block;
@@ -105,7 +111,8 @@ body {
         display: flex;
         gap: 50px;
         background-color: #ffffff;
-        padding: 40px;
+        padding-top: 40px;
+        padding-left: 30px;
         border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
@@ -118,7 +125,7 @@ body {
 
       #contacts{
         display: flex;
-        gap:20px;
+        column-gap:30px;
         margin-bottom: 30px;
         
       }

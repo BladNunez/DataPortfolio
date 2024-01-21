@@ -37,4 +37,14 @@ body {
       a:hover {
         text-decoration: underline;
       }
+
+      .previous:hover{
+        background-color: #ddd;
+        color: black;
+
+      }
+
+      .previous{
+        font-size: 30px;
+      }
       
