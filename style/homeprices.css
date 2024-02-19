@@ -47,3 +47,7 @@ body {
       .previous{
         font-size: 30px;
       }
+
+      img{
+        border:2px solid black;
+      }
