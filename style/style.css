@@ -78,8 +78,8 @@ body {
       
       #projecttitle{
         margin-bottom: 10px;
-        color: #333333;
-        font-size: 15px;
+        color:darkslategray;
+        font-weight: bold;
       }
       #projectheader{
         margin-bottom: 10px;
@@ -88,10 +88,14 @@ body {
       }
       
       #project-section > div {
+        
+        justify-content: center;
+        gap: 17px;
+      }
+
+      #p {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
       }
       
       .project {
