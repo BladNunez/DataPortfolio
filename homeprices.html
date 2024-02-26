@@ -12,6 +12,10 @@
     <div class="container">
       <a href="index.html" class="previous"> &larr;</a>
       <h1>Washington Home Price Analysis</h1>
+      <h3>
+        Presented by: Bladimir Nunez <br />
+        Last Updated: February 26th, 2024
+      </h3>
       <img
         src="images/homeImages/Dashboard1.jpg"
         alt="Project 1"
@@ -30,11 +34,11 @@
         <p>
           I was curious about the housing market in Washington so I came across
           a dataset that was from 2014. This dataset contains listings of homes
-          in diffrent cities across the state of Washington. In this project I
-          was able to find insights such as how the pricing of homes differed
-          due to what it contained such as amount of rooms or if the home was
-          renovated, would that make a home more expensive? All questions and
-          visuals are below.
+          in diffrent cities across the state of Washington from May-July. In
+          this project I was able to find insights such as how the pricing of
+          homes differed due to what it contained such as amount of rooms or if
+          the home was renovated, would that make a home more expensive? All
+          questions and visuals are below.
           <br /><br />
           <a
             href=" https://github.com/BladNunez/DataAnalysis/blob/main/houseprices/homeprices.sql"
@@ -64,7 +68,19 @@
           width="500"
           height="500"
         />
-        <figcaption></figcaption>
+        <figcaption>
+          The first question I wanted to answer was to analyze the distrubution
+          of home prices in the state of Washington. I began by using a boxplot
+          here that shows the distrubution of home prices. The circle that is
+          showed is an outlier and this signifies the cheapest priced home in
+          Washington that is at $7800. The first line above this circle is the
+          minimum line and this shows that the minimum home price in our data is
+          around $80,000. The blue box you see is the interquartile range and
+          starting from the bottom is the lower quartile and the middle is the
+          median. The top of the box is the upperquartile while the line at the
+          top is the max value. I find here that the median price of homes is a
+          little more then $300,000 while the max is north of $440,000.
+        </figcaption>
         <br /><br />
 
         <p>
@@ -76,7 +92,16 @@
           width="700"
           height="550"
         />
-        <figcaption>Excel, SQL, Tableau</figcaption>
+        <figcaption>
+          In this visual I use a scatter plot to see if there is a correlation
+          between the price of a home and the number of bedrooms it has. A
+          scatter plot is used to plot two variables and see if one variable
+          will make the other go up or vice versa. In this case the two
+          variables are bedrooms and home price. I analyze here that if a home
+          continues to have more bedrooms then the price of that home will
+          increase. The trend line is continuing to go up as the amount of
+          bedrooms increases proving the price of the home will also go up.
+        </figcaption>
         <br /><br />
 
         <p>
@@ -88,7 +113,10 @@
           width="500"
           height="200"
         />
-        <figcaption>Excel, SQL, Tableau</figcaption>
+        <figcaption>
+          The average square feet of homes in the state of Washington is
+          2,139ft.
+        </figcaption>
         <br /><br />
         <p>
           <b>
@@ -102,7 +130,12 @@
           width="700"
           height="550"
         />
-        <figcaption>Excel, SQL, Tableau</figcaption>
+        <figcaption>
+          Again I use a scatter plot to show the correlation between amount of
+          bathrooms and home price. As you see with the trend line going up we
+          analyze that the more bathrooms a home has the price of the home will
+          increase so these two variables have a strong correlation.
+        </figcaption>
         <br /><br />
         <p>
           <b>
@@ -116,7 +149,14 @@
           width="800"
           height="500"
         />
-        <figcaption>Excel, SQL, Tableau</figcaption>
+        <figcaption>
+          In this visual I use a bar chart that is used to compare numerical
+          values of objects. Here I use the bar chart to compare each cities
+          home condition to each other. I find that the city of Inglewood-Finn
+          Hill has the highest average home condition of 5 which is the best
+          home condition while the city of Snoqualmie Pass is at 3 which this
+          being the lowest home condtion of all cities in Washington.
+        </figcaption>
         <br /><br />
         <p>
           <b>6. Are renovated homes priced higher than non-renovated ones?</b>
@@ -127,7 +167,11 @@
           width="500"
           height="500"
         />
-        <figcaption>Excel, SQL, Tableau</figcaption>
+        <figcaption>
+          I use another bar chart here to compare average price of non-renovated
+          homes and renovated ones. I find that homes that have not been
+          renovated are higher in price then to ones that are.
+        </figcaption>
         <br /><br />
         <p>
           <b>
@@ -141,7 +185,11 @@
           width="500"
           height="500"
         />
-        <figcaption>Excel, SQL, Tableau</figcaption>
+        <figcaption>
+          Another bar chart is utilized to show average price of homes that have
+          a waterfront and those that do not. Here we visualize that homes that
+          have a waterfront are double the average price of homes without one.
+        </figcaption>
         <br /><br />
         <p><b>8. How has the average home price changed over the months?</b></p>
         <img
@@ -150,7 +198,11 @@
           width="700"
           height="500"
         />
-        <figcaption>Excel, SQL, Tableau</figcaption>
+        <figcaption>
+          I wanted to analyze the difference in home price from the months
+          available so this visual shows that May was the lowest average home
+          price while June was the highest at $575,115
+        </figcaption>
         <br /><br />
         <p><b>9. What cities have the highest average home prices?</b></p>
         <img
@@ -159,8 +211,29 @@
           width="600"
           height="500"
         />
-        <figcaption>Excel, SQL, Tableau</figcaption>
-        <br /><br />
+        <figcaption>
+          I visualize the top 5 most expensive cities in Washington. I found
+          that Bellevue, Mercer Island, Yarrow Point, Clyde Hill and Medina are
+          the most expensive cities with Medina being at the top with an average
+          price of $2,000,000.
+        </figcaption>
+        <br />
+      </section>
+
+      <section id="insights">
+        <h2>Insights</h2>
+        <ul>
+          <li>Homes with more bathrooms/bedrooms are higher in price</li>
+          <li>Non-Renovated homes are priced higher then renovated ones</li>
+          <li>
+            Homes with a waterfront are priced higher then homes without
+            waterfront
+          </li>
+          <li>
+            Top 5 most expensive cities do not have the highest home condition
+          </li>
+          <li>Month of July had the highest average price of homes sold</li>
+        </ul>
       </section>
 
       <section id="data-sources">

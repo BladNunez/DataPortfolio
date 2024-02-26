@@ -7,6 +7,12 @@ body {
         background-image: conic-gradient(lightgray, black,#f9f9f9);
       }
       
+      figcaption{
+        font-style: italic;
+        color:#333333;
+      }
+
+
       .container {
         max-width: 800px;
         margin: 20px auto;
