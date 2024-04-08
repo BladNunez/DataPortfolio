@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StackOverFlow Developer Survey</title>
+    <meta name="description" content="Contains my third project" />
+    <meta name="author" content="Bladimir Nunez" />
+    <link rel="stylesheet" href="style/HTMLStyle.css" />
+  </head>
+  <body>
+    <div class="container">
+      <a href="index.html" class="previous"> &larr;</a>
+      <h1>StackOverFlow Developer Survey Analysis</h1>
+      <h3>
+        Presented by: Bladimir Nunez <br />
+        Last Updated: March 26th, 2024
+      </h3>
+      <section id="introduction">
+        <h1>Project Overview</h1>
+        <p>
+          In this project I analyze data from a stack overflow survey that was
+          conducted in May of 2023 from May 8th - May 19th to find out
+          information on software developers such as salary, how they like to
+          learn how to code and favorite technolgies used. Questions I will be
+          answering in this analysis are:
+          <br />
+        </p>
+        <ol>
+          <li>In what Industries do developers get paid the most?</li>
+          <li>How much does remote working matter to employees?</li>
+          <li>How does coding experience affect the level of pay?</li>
+          <li>What is the most popular method of learning to code?</li>
+          <li>
+            Are you more likely to get a developer role with a masters degree?
+          </li>
+        </ol>
+        <a
+          href="https://github.com/BladNunez/stack-overflow/blob/main/surveyAnalysis.ipynb"
+          >Visit GitHub Code!</a
+        >
+      </section>
+
+      <section id="eda">
+        <h1>Data Analysis (Data Visualization)</h1>
+        <p><b>1. In what Industries do developers get paid the most? </b></p>
+        <img src="images/stack/one.png" alt="one" width="750" height="500" />
+        <figcaption>
+          Here I use a bar chart that compares the diffrent industries our
+          developers work in. The Y-axis shows the salaries that were reported
+          in our survey and we see here that developers working in the financial
+          industry make the most compared to other industries at $95,000.
+        </figcaption>
+        <br /><br />
+
+        <p>
+          <b>2. How much does remote working matter to employees? </b>
+        </p>
+        <img src="images/stack/two.png" alt="one" width="450" height="450" />
+        <figcaption>
+          This table here shows the diffrent work settings that were reported in
+          our survey alongside the amount of developers in each work setting. As
+          we can see most developers work either remote or hybrid with a very
+          low number of fully in person work. This shows that developers want to
+          work either fully remote or hybrid.
+        </figcaption>
+        <br /><br />
+
+        <p>
+          <b>3. How does coding experience affect the level of pay? </b>
+        </p>
+        <img src="images/stack/three.png" alt="one" width="650" height="500" />
+        <figcaption>
+          Here a scatter plot is used to compare the professional years worked
+          of developers and the compensation that comes with that experience.
+          From our data we see that most developers that have 10+ years make
+          around $100,000 and the more experience they get there seems to not be
+          a change in compensation. As we can see there is one outlier of
+          someone with 40 years of experience making well north of $300,000.
+        </figcaption>
+        <br /><br />
+        <p>
+          <b> 4. What is the most popular method of learning to code? </b>
+        </p>
+        <img src="images/stack/four.png" alt="one" width="500" height="500" />
+        <figcaption>
+          We use another table to display all the ways our developers like to
+          learn how to code alongside the amount of developers in each category.
+          A large majority of developers from the survey like to learn from
+          books while the second most popular way to learn how to code is
+          through online courses or certifications.
+        </figcaption>
+        <br /><br />
+        <p>
+          <b>
+            5. Are you more likely to get a developer role with a masters
+            degree?
+          </b>
+        </p>
+        <img src="images/stack/five.png" alt="one" width="500" height="500" />
+        <figcaption>
+          A majority of our developers have a bachelors degree which is more
+          then those who have a masters. From our data we see that people do not
+          need a masters degree to get a role as a developer and a bachelors is
+          enough but also is possible to not have a college degree and still
+          land a role like the 1555 people with primary/elementry school
+          education and 1448 people having something else.
+        </figcaption>
+        <br /><br />
+      </section>
+
+      <section id="insights">
+        <h2>Insights</h2>
+        <ul>
+          <li>
+            Developers get paid the most in the financial industry with an
+            average salary of $95,000
+          </li>
+          <br />
+          <li>
+            31000 people work in hybrid setting and 30000 people are fully
+            remote. Only 12,000 people are fully in person. this shows that
+            developers prefer working remote or having a hybrid schedule.
+          </li>
+          <br />
+          <li>
+            There is a positive correlation with with compensation as you have
+            more work experience and the highest paid developer in this dataset
+            was at $300,000 with 40 years of experience.
+          </li>
+          <br />
+          <li>
+            The most popular method of learning how to code is through books.
+            44,000 people agreed with this method.
+          </li>
+          <br />
+          <li>
+            Most developers in our survey had bachelors degrees then masters.
+            From analysis you do not need a masters to get a developer role.
+          </li>
+        </ul>
+      </section>
+
+      <section id="data-sources">
+        <h2>Data Sources</h2>
+        <p>
+          Stack overflow website survey 2023:<a
+            href="https://insights.stackoverflow.com/survey"
+          >
+            StackOverFlow Survey</a
+          >
+        </p>
+      </section>
+
+      <section id="technologies-used">
+        <h2>Technologies Used</h2>
+        <p>
+          Pandas: Data Manipulation
+          <br />
+          Seaborn: Data Visualizations
+          <br />
+          Jupyter Notebook: Python development contained in jupyter notebook
+        </p>
+      </section>
+
+      <section id="datacleaning">
+        <h2>Data Cleaning/Preprocessing</h2>
+        <ul>
+          <li>Dropped Uneeded Columns</li>
+          <li>Remove Duplicates</li>
+          <li>
+            Handled missing values: Replace nulls with 0 in number columns
+          </li>
+          <li>
+            Cleaned out columns by removing uneeded information for cleaner
+            analysis
+          </li>
+        </ul>
+      </section>
+
+      <section id="challenges">
+        <h2>Challenges</h2>
+        <p>
+          A challenge I had with this project was working on comparing years of
+          experience with compensation using a scatter plot. I grouped the years
+          of experience to have a smaller amount of points graphed. Initially
+          the more years of experience you have the higher compensation but what
+          I received from the scatter plot was that the more years worked the
+          salary did not change. For future consideration I will go back into
+          the data and analyze the salaries more as well as grouping it in a
+          diffrent way if possible for visual purposes.
+        </p>
+      </section>
+    </div>
+  </body>
+</html>

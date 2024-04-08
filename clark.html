@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caitlyn Clark Analysis</title>
+    <meta name="description" content="Contains my second project" />
+    <meta name="author" content="Bladimir Nunez" />
+    <link rel="stylesheet" href="style/HTMLStyle.css" />
+  </head>
+  <body>
+    <div class="container">
+      <a href="index.html" class="previous"> &larr;</a>
+      <h1>Caitlyn Clark's Performance in Women's College Basketball</h1>
+      <h3>
+        Presented by: Bladimir Nunez <br />
+        Last Updated: April 1, 2024
+      </h3>
+
+      <section id="introduction">
+        <h1>Project Overview</h1>
+        <p>
+          Many Consider Caitlyn Clark who is currently a guard for the Iowa
+          Hawkeyes womens basketball team to be the greatest player ever in
+          womens college basketball thus far. But with every great thing theres
+          always the bad. With her fans there are also critics who think because
+          Caitlyn Clark currently leads D1 womens basketball in scoring that she
+          is considered a "ball-hog" which indicates she never passes the ball
+          to her teammates. This project will compare Caitlyn Clark and other
+          women basketball players in division 1 in scoring and assists so far
+          this year. As I compare the scoring to assists ratio I will want to
+          prove that she is not a "ball-hog" and indeed passes the ball to her
+          teammates and still is efficient herself with her scoring
+          capabilities.
+          <br /><br />
+          Problem: Prove that Caitlyn Clark is not indeed a "ball-hog" but an
+          efficient scorer and passer
+          <br /><br />
+          <a
+            href="https://github.com/BladNunez/DataAnalysis/blob/main/clark/Caitlyn%20Clark%20Analysis.ipynb"
+            >Visit GitHub Code!</a
+          >
+        </p>
+      </section>
+
+      <section id="eda">
+        <h1>Exploratory Data Analysis (EDA)</h1>
+        <p><b>1.) First Proof</b></p>
+        <img src="images/clark/one.jpg" alt="one" width="500" height="500" />
+        <figcaption>
+          I use a table to display 15 womens college basketball players and sort
+          it by "APG" which stands for "Assists per game". As we can see Caitlyn
+          Clark leads D1 womens basketball in assists with 9 APG. Of course we
+          can also see that she has the most "PPG" which stands for "Points per
+          game" at 32 PPG. The values highlighted in blue mean that those
+          players are not in the top 10 in PPG in D1. All the other 10 players
+          are in the top 10 and we see that the players who are not in top 10
+          scoring list have more assists then 8 other players in the top 10
+          scoring list. This shows that Caitlyn Clark clearly leads players who
+          are in the top 10 of both scoring and assists per game.
+        </figcaption>
+        <br /><br />
+        <p><b>2.) Second Proof</b></p>
+        <img src="images/clark/two.jpg" alt="one" width="750" height="500" />
+        <figcaption>
+          Now I want to visualize the PPG and APG within our data. Here I use a
+          scatter plot to compare these 2 variables. We can see that Caitlyn
+          Clark is all the way in the right corner of the graph. This indicates
+          that she has the highest points per game as well as the highest
+          assists per game. The next player closests to Clark in assists is
+          McKenna Hofschild with 7.3 APG but she is low in points compared to
+          Clark at 22 PPG. For points the next player closest to Clark is Juju
+          Watkins from Southern California with 27 PPG but very low in assist
+          compared to Clark at 3.3 APG. The names under McKenna Hofschild are
+          the 5 players who are not in the top 10 in scoring but are in assists.
+          This proves that Caitlyn Clark is an efficent scorer and passer and
+          very remarkable that she leads in both categories by a significant
+          margin.
+        </figcaption>
+      </section>
+
+      <section id="insights">
+        <h2>Insights</h2>
+        <ul>
+          <li>
+            Caitlyn Clark leads womens college basketball in PPG: 32 , APG: 9
+          </li>
+          <br />
+          <li>
+            Clark averages 4.7 more points then the second highest scorer in
+            womens college basketball and 1.6 more assists then second APG
+            receipent
+          </li>
+          <br />
+          <li>
+            We prove that Caitlyn Clark is very efficent when scoring and
+            passing the ball to obtain remarkable stats in each game
+          </li>
+        </ul>
+      </section>
+
+      <section id="data-sources">
+        <h2>Data Sources</h2>
+        <p>
+          I used webscraping to scrape the top 10 points per game scorers in
+          womens college basketball as well as all 250 players in the 'Assists
+          per game' category
+        </p>
+        <a href="https://www.ncaa.com/stats/basketball-women/d1"
+          >Link to Site</a
+        >
+      </section>
+
+      <section id="technologies-used">
+        <h2>Technologies Used</h2>
+        <p>
+          BeautifulSoup: Webscraping NCAA site for data needed <br />
+          Pandas: Data manipulation and putting together data into dataframes
+          <br />
+          Matplotlib: Data visualizations <br />
+          Jupyter Notebook: Notebook containing all python code in one place for
+          development
+        </p>
+      </section>
+
+      <section id="datacleaning">
+        <h2>Data Cleaning/Preprocessing</h2>
+        <p>
+          The data cleaning process was simple. I did not have to do any
+          excessive cleaning of the data due to it being clean ready already. I
+          only stripped the text needed from each row of data needed for
+          analysis.
+        </p>
+      </section>
+
+      <section id="challenges">
+        <h2>Challenges</h2>
+        <p>
+          This was a learning process on webscraping data from websites for the
+          first time. I had some trouble plotting two variables due to
+          type-error issues. I later found that when plotting two numerical
+          variables that I need to convert them from a string to numbers using
+          the "to_numeric()" function. For the future now I know this needs to
+          be done before plotting to avoid this error.
+        </p>
+      </section>
+    </div>
+  </body>
+</html>
