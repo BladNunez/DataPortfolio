@@ -9,6 +9,69 @@
     <link rel="stylesheet" href="style/HTMLStyle.css" />
   </head>
   <body>
+    <script>
+      fetch("1A.csv")
+        .then((response) => response.text())
+        .then((data) => {
+          const rows = data.split("\n");
+          const headers = rows[0].split(",");
+
+          const table = document.getElementById("csv-table");
+          const thead = table.querySelector("thead");
+          const tbody = table.querySelector("tbody");
+
+          headers.forEach((header) => {
+            const th = document.createElement("th");
+            th.textContent = header;
+            thead.querySelector("tr").appendChild(th);
+          });
+
+          for (let i = 1; i < rows.length; i++) {
+            const rowData = rows[i].split(",");
+            if (rowData.length === headers.length) {
+              const tr = document.createElement("tr");
+              rowData.forEach((cellData) => {
+                const td = document.createElement("td");
+                td.textContent = cellData;
+                td.style.padding = "10px"; // Add padding to each cell
+                tr.appendChild(td);
+              });
+              tbody.appendChild(tr);
+            }
+          }
+        });
+
+      fetch("4.csv")
+        .then((response) => response.text())
+        .then((data) => {
+          const rows = data.split("\n");
+          const headers = rows[0].split(",");
+
+          const table = document.getElementById("csv-table2");
+          const thead = table.querySelector("thead");
+          const tbody = table.querySelector("tbody");
+
+          headers.forEach((header) => {
+            const th = document.createElement("th");
+            th.textContent = header;
+            thead.querySelector("tr").appendChild(th);
+          });
+
+          for (let i = 1; i < rows.length; i++) {
+            const rowData = rows[i].split(",");
+            if (rowData.length === headers.length) {
+              const tr = document.createElement("tr");
+              rowData.forEach((cellData) => {
+                const td = document.createElement("td");
+                td.textContent = cellData;
+                td.style.padding = "10px"; // Add padding to each cell
+                tr.appendChild(td);
+              });
+              tbody.appendChild(tr);
+            }
+          }
+        });
+    </script>
     <div class="container">
       <a href="index.html" class="previous"> &larr;</a>
       <h1>Pizza Place Sales Analysis</h1>
@@ -20,7 +83,7 @@
         <h1>Project Overview</h1>
         <p>
           In this project I am analyzing a year's worth of sales from a
-          fictitious pizza place that contains the date and time of each order
+          fictitious pizza shop that contains the date and time of each order
           and the pizzas served, with additional details on the type, size,
           quantity, price, and ingredients. Questions I will be answering in
           this analysis are down below.
@@ -44,7 +107,10 @@
         </ol>
         <a href="">Visit GitHub Code!</a>
         <br />
-        <a href="">Visit Tableau Dashboard!</a>
+        <a
+          href="https://public.tableau.com/app/profile/bladimir.nunez/viz/PizzaShopSalesDashboard/Dashboard1?publish=yes"
+          >Visit Tableau Dashboard!</a
+        >
       </section>
 
       <section id="eda">
@@ -55,7 +121,12 @@
             hours?</b
           >
         </p>
-        <img src="images/" alt="one" width="750" height="500" />
+        <table id="csv-table">
+          <thead>
+            <tr></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
         <figcaption></figcaption>
         <br /><br />
 
@@ -65,7 +136,7 @@
             bestsellers?</b
           >
         </p>
-        <img src="images/" alt="one" width="450" height="450" />
+        <img src="images/" alt="one" width="500" height="500" />
         <figcaption></figcaption>
         <br /><br />
 
@@ -75,7 +146,7 @@
             seasonality in the sales?</b
           >
         </p>
-        <img src="images/" alt="one" width="650" height="500" />
+        <img src="images/" alt="one" width="500" height="500" />
         <figcaption></figcaption>
         <br /><br />
         <p>
@@ -84,7 +155,12 @@
             promotions we could leverage?
           </b>
         </p>
-        <img src="images/" alt="one" width="500" height="500" />
+        <table id="csv-table2">
+          <thead>
+            <tr></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
         <figcaption></figcaption>
         <br /><br />
       </section>
@@ -123,15 +199,11 @@
 
       <section id="datacleaning">
         <h2>Data Cleaning/Preprocessing</h2>
-        <ul>
-          <li></li>
-          <li></li>
-        </ul>
-      </section>
-
-      <section id="challenges">
-        <h2>Challenges</h2>
-        <p></p>
+        <p>
+          No cleaning of data was necessary due to it already being cleaned I
+          only had to transform some values in a column from one letter to full
+          words for better readability.
+        </p>
       </section>
     </div>
   </body>
