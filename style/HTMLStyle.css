@@ -12,6 +12,7 @@ body {
         color:#333333;
       }
 
+
       tbody {
         display:block;
         max-height: 300px; /* Set the maximum height for the tbody */
