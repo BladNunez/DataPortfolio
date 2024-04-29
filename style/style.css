@@ -173,6 +173,9 @@ body {
       
       .effect img:hover{
         --_i: 100%;
-        transition: .3s, background-size .3s .3s;
+        transition: .2s, background-size .3s .3s;
       }
 
+      img{
+        border: 2px solid black;
+      }
