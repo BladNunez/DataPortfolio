@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza Sales Analysis</title>
+    <meta name="description" content="Contains my fourth project" />
+    <meta name="author" content="Bladimir Nunez" />
+    <link rel="stylesheet" href="style/HTMLStyle.css" />
+  </head>
+  <body>
+    <script>
+      fetch("1A.csv")
+        .then((response) => response.text())
+        .then((data) => {
+          const rows = data.split("\n");
+          const headers = rows[0].split(",");
+
+          const table = document.getElementById("csv-table");
+          const thead = table.querySelector("thead");
+          const tbody = table.querySelector("tbody");
+
+          headers.forEach((header) => {
+            const th = document.createElement("th");
+            th.textContent = header;
+            thead.querySelector("tr").appendChild(th);
+          });
+
+          for (let i = 1; i < rows.length; i++) {
+            const rowData = rows[i].split(",");
+            if (rowData.length === headers.length) {
+              const tr = document.createElement("tr");
+              rowData.forEach((cellData) => {
+                const td = document.createElement("td");
+                td.textContent = cellData;
+                td.style.padding = "10px"; // Add padding to each cell
+                tr.appendChild(td);
+              });
+              tbody.appendChild(tr);
+            }
+          }
+        });
+
+      fetch("4.csv")
+        .then((response) => response.text())
+        .then((data) => {
+          const rows = data.split("\n");
+          const headers = rows[0].split(",");
+
+          const table = document.getElementById("csv-table2");
+          const thead = table.querySelector("thead");
+          const tbody = table.querySelector("tbody");
+
+          headers.forEach((header) => {
+            const th = document.createElement("th");
+            th.textContent = header;
+            thead.querySelector("tr").appendChild(th);
+          });
+
+          for (let i = 1; i < rows.length; i++) {
+            const rowData = rows[i].split(",");
+            if (rowData.length === headers.length) {
+              const tr = document.createElement("tr");
+              rowData.forEach((cellData) => {
+                const td = document.createElement("td");
+                td.textContent = cellData;
+                td.style.padding = "10px"; // Add padding to each cell
+                tr.appendChild(td);
+              });
+              tbody.appendChild(tr);
+            }
+          }
+        });
+    </script>
+    <div class="container">
+      <a href="index.html" class="previous"> &larr;</a>
+      <h1>Pizza Place Sales Analysis</h1>
+      <h3>
+        Presented by: Bladimir Nunez <br />
+        Last Updated: April 12, 2024
+      </h3>
+      <br />
+      <img src="images/pizza/Dash.png" alt="one" width="700" height="500" />
+      <section id="introduction">
+        <h1>Project Overview</h1>
+        <p>
+          In this project I am analyzing a year's worth of sales from a
+          fictitious pizza shop in 2015 that contains the date and time of each
+          order and the pizzas served, with additional details on the type,
+          size, quantity, price, and ingredients. Questions I will be answering
+          in this analysis are down below.
+        </p>
+        <ol>
+          <li>
+            How many customers do we have each day? Are there any peak hours?
+          </li>
+          <li>
+            How many pizzas are typically in an order? Do we have any
+            bestsellers?
+          </li>
+          <li>
+            How much money did we make this year? Can we indentify any
+            seasonality in the sales?
+          </li>
+          <li>
+            Are there any pizzas we should take of the menu, or any promotions
+            we could leverage?
+          </li>
+        </ol>
+        <a
+          href="https://github.com/BladNunez/DataAnalysis/blob/main/pizza_sales/pizzaSales.sql"
+          >Visit GitHub Code!</a
+        >
+        <br />
+        <a
+          href="https://public.tableau.com/app/profile/bladimir.nunez/viz/PizzaShopSalesDashboard/Dashboard1?publish=yes"
+          >Visit Tableau Dashboard!</a
+        >
+      </section>
+
+      <section id="eda">
+        <h1>Data Analysis (Data Visualization)</h1>
+        <p>
+          <b
+            >1. How many customers do we have each day? Are there any peak
+            hours?</b
+          >
+        </p>
+        <table id="csv-table">
+          <thead align="left">
+            <tr></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <figcaption>
+          In this table I have uploaded the CSV from my analysis and are able to
+          scroll to see how many customers our pizza shop has had everyday with
+          a majority of days having >50 customers.
+        </figcaption>
+        <br />
+        <img src="images/pizza/1B.png" alt="one" width="700" height="500" />
+        <figcaption>
+          I use a bar graph here to show our peak hours based on amount of
+          customers we had throughout the year We can see that at noon and 1Pm
+          we have our most business come in. The next greatest rush of traffic
+          would be at 5 and 6Pm. Before lunch time we have less then 10 people
+          come in at around 9-10Am.
+        </figcaption>
+        <br /><br />
+        <p>
+          <b>2. How many pizzas are typically in an order?</b>
+        </p>
+        <img src="images/pizza/2.png" alt="one" width="600" height="300" />
+        <figcaption>
+          On average we typically have one pizza in each order this year.
+        </figcaption>
+        <br /><br />
+
+        <p>
+          <b
+            >3. How much money did we make this year? Can we indentify any
+            seasonality in the sales?</b
+          >
+        </p>
+        <img src="images/pizza/3A.png" alt="one" width="600" height="300" />
+        <figcaption>
+          For the year of 2015 the pizza shop made $817,860 dollars.
+        </figcaption>
+        <br /><br />
+        <img src="images/pizza/3B.png" alt="one" width="700" height="400" />
+        <figcaption>
+          In July the shop made its most money for the month with $72,558 in
+          revenue. From August, September and October we see a decline in
+          monthly sales and by November we increase in revenue sales. Months of
+          January, July, March, May and November we see these are our popular
+          months for best sales.
+        </figcaption>
+        <br /><br />
+        <p>
+          <b>
+            4. Are there any pizzas we should take off the menu, or any
+            promotions we could leverage? Do we have any bestsellers?
+          </b>
+        </p>
+        <table id="csv-table2">
+          <thead align="left">
+            <tr></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <figcaption>
+          Based off our scrollable table here we look at all our pizzas we offer
+          and the amount of revenue each brought in for the year. We see that
+          our top three bestsellers are the Thai chicken pizza, BBQ chicken
+          pizza and the California chicken pizza. Based off analysis I would not
+          take any pizzas off the menu even though the Brie Carre Pizza is our
+          least popular and only brought in $11,000 dollars in revenue. If we
+          take it off the menu that is $11,000 dollars off our yearly revenue.
+          From the line chart above we see that we have a decline in sales from
+          August, September and October. I would utilize that time period to
+          have deals with our best selling pizzas such as a buy one get one
+          free. I believe this would give us more sales throughout those months
+          to increase revenue. Based on our best times we sell I would want the
+          shop to promote these deals from 12-2Pm and 4-6Pm.
+        </figcaption>
+        <br /><br />
+      </section>
+
+      <section id="insights">
+        <h2>Insights/Recommendations</h2>
+        <ul>
+          <li>The shop made $817,860 in 2015</li>
+          <br />
+          <li>Our peak hours are from 12-1PM and 5-6PM</li>
+          <br />
+          <li>
+            Month of July was our most profitable month while October is our
+            least
+          </li>
+          <br />
+          <li>I would recommend to keep all our pizzas on menu</li>
+          <br />
+          <li>
+            I recommend to utilize a buy one get one free promo for the months
+            of August,September,October to increase sales using our top 3
+            bestselling pizzas
+          </li>
+        </ul>
+      </section>
+
+      <section id="data-sources">
+        <h2>Data Sources</h2>
+        <p>
+          I obtained this data set from Maven Analytics that can be found here
+          under the food and beverage category.
+          <a
+            href="https://mavenanalytics.io/data-playground?tags=5S6IPpopvH1sCebCbeUJbz "
+          >
+            Link to DataSet</a
+          >
+        </p>
+      </section>
+
+      <section id="technologies-used">
+        <h2>Technologies Used</h2>
+        <p>
+          SQL: Data Cleaning and Analysis
+          <br />
+          Tableau: Data Visualization
+        </p>
+      </section>
+
+      <section id="datacleaning">
+        <h2>Data Cleaning/Preprocessing</h2>
+        <p>
+          No cleaning of data was necessary due to it already being cleaned I
+          only had to transform some values in a column from one letter to full
+          words for better readability.
+        </p>
+      </section>
+    </div>
+  </body>
+</html>

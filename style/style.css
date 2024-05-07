@@ -1,0 +1,181 @@
+/* Global Styles */
+body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+         
+         /*background-color: #f9f9f9;*/
+         background-image: conic-gradient(lightgray, black,#f9f9f9);
+}
+
+
+      img{
+        margin-top: 12px;
+        border-radius: 14px;
+      }
+
+    
+      .outer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      
+      /* Header Section Styles */
+      #header {
+        /*background-color:#f9f9f9;*/
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+      }
+      
+      #headcontainer h1 {
+        margin: 0;
+        font-size: 30px;
+        color: #ffffff; /* White text color */
+        
+      }
+
+      
+      #links h4 {
+        display: inline-block;
+        margin: 0 15px;
+        color: #ffffff; /* White text color */
+      }
+      
+      /* About Section Styles */
+      #about {
+        background-color: #ffffff; /* White background color */
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: justify;
+      }
+
+      .headshot {
+        width: auto;
+        height: 255px; 
+       }
+
+      
+      #about h2 {
+        margin-bottom: 20px;
+        color: #333333;
+        font-size: 28px;
+      }
+      
+      #about p {
+        line-height: 1.6;
+        color:darkslategray;
+        font-size: 18px;
+      }
+      
+      /* Projects Section Styles */
+      #project-section {
+        background-color: #f9f9f9;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      
+      #projecttitle{
+        margin-bottom: 10px;
+        color:rgb(36, 40, 44);
+        font-weight: bold;
+      }
+      #projectheader{
+        margin-bottom: 10px;
+        color: #333333;
+        font-size: 24px;
+      }
+      
+      #project-section > div {
+        
+        justify-content: center;
+        gap: 17px;
+      }
+
+      #p {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      
+      .project {
+        flex: 0 0 calc(50% - 40px);
+        margin: 20px;
+        text-align: center;
+      }
+      
+      .project img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        
+      }
+      
+      .project h2 {
+        margin-top: 10px;
+        color: #333333;
+        font-size: 24px;
+      }
+
+      
+      /* Contact Info Section Styles */
+      #contact-info {
+        display: flex;
+        gap: 50px;
+        background-color: #ffffff;
+        padding-top: 40px;
+        padding-left: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      
+      #contacthead h2 {
+        margin: 0;
+        color: #333333;
+        font-size: 28px;
+      }
+
+      #contacts{
+        display: flex;
+        column-gap:30px;
+        
+        
+      }
+      
+      #contacts a {
+        text-decoration: none;
+        color: #0077cc;
+      }
+      
+      #contacts a:hover {
+        text-decoration: underline;
+      }
+
+      .effect > img {
+        --c: black; /* the border color */
+        --b: 10px;    /* the border thickness*/
+        --g: 5px;     /* the gap on hover */
+        
+        padding: calc(var(--g) + var(--b));
+        --_g: #0000 25%,var(--c) 0;
+        background: 
+          conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g))
+           var(--_i,200%) 0  /200% var(--_i,var(--b))  no-repeat,
+          conic-gradient(            at bottom var(--b) left  var(--b),var(--_g))
+           0   var(--_i,200%)/var(--_i,var(--b)) 200%  no-repeat;
+        transition: .3s, background-position .3s .3s;
+        cursor: pointer;
+      }
+      
+      .effect img:hover{
+        --_i: 100%;
+        transition: .2s, background-size .3s .3s;
+      }
+
+      img{
+        border: 2px solid black;
+      }
