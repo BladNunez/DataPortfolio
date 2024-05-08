@@ -53,8 +53,13 @@
         <p>
           In this project I analyze bikeshare trips in the city of Austin,TX
           from 2013 - 2024. In the year 2024 our data is only updated up until
-          February. In this project the goals are listed down below:
-          <br />
+          February. Our project contains information about bikeshare trips in
+          the city such as the duration of the trip in minutes, the starting and
+          ending stations a bike was used from and placed back in, the location
+          of those bikes and the date and time when the bikes were used. Our
+          project goals are listed down below:
+
+          <br /><br />
           1.) Analyze bike trip durations to understand average trip lengths and
           peak usage times.
           <br />
@@ -76,13 +81,35 @@
       <section id="eda">
         <h1>Exploratory Data Analysis (Data Visualization)</h1>
         <img src="images/bike/two.png" alt="one" width="600" height="500" />
-        <figcaption></figcaption>
+        <figcaption>
+          Here I use a histogram to show the distribution of time per ride in
+          Austin, TX from 2013 - 2024. In our data we have that riders ranged
+          from 2 - 1000+ minutes on their rides over this time frame. For the
+          riders with a 1000+ minutes that could mean that they used the bikes
+          over certain amount of days but we need more data to confirm that
+          theory but also are probable outliers in our data. As we see in our
+          histogram the majority of our riders throughout the years typically
+          ride for around 10 - 100 minutes. On the x-axis our time duration is
+          written in exponents due to the many values of our time duration data.
+          For example 10^1 is 10 minutes and 10^2 is 100 minutes and so on.
+        </figcaption>
         <br /><br />
         <img src="images/bike/four.png" alt="one" width="650" height="500" />
-        <figcaption></figcaption>
+        <figcaption>
+          A bar chart is used to compare the top 10 most popular starting
+          stations in the city of Austin. As we see here throughout the time
+          frame of our data these 10 stations have gotten over 20000 riders.
+          These starting locations would need to be updated and maintained due
+          to the heavy usage it gets.
+        </figcaption>
         <br /><br />
         <img src="images/bike/3.png" alt="one" width="650" height="500" />
-        <figcaption></figcaption>
+        <figcaption>
+          Another bar chart is used for the ending stations and it seems that
+          users return their bikes to the same location they started from so
+          again to reiterate we need to maintain and keep up to date these 10
+          stations due to the heavy usage it receives.
+        </figcaption>
         <br /><br />
         <table id="table">
           <thead align="left">
@@ -90,21 +117,70 @@
           </thead>
           <tbody></tbody>
         </table>
-        <figcaption></figcaption>
+        <figcaption>
+          Here we have a table of our diffrent subscriptions that we offer and
+          the average minutes each subscription rides for. We can see that our
+          single trip ride subscription is the most popular according to the
+          amount of time the bikes are in use for. The ride scout single ride
+          has the lowest amount of ride duration with 2 minutes.
+        </figcaption>
         <br /><br />
         <img src="images/bike/5.png" alt="one" width="700" height="500" />
-        <figcaption></figcaption>
+        <figcaption>
+          Subplot is used here to showcase time series of our bikeshare usage
+          from 2013 - 2024 as well as the usage of the bikeshare in the months
+          of 2023. In our line chart we see the trend of usage throughout the
+          years and we can see that 2018 was the most popular year with almost
+          400,000 riders. From 2019-2020 bike usage declined sharply. Since then
+          it has risen from 2021-2023. We only have data for the month of
+          January for 2024 so we would need updated data up to this point to see
+          the usage over time for this year. Our second graph contains data from
+          2023 and the usage over the months for our bikeshare. We see that the
+          month of October was the most popular month with over 35000 riders.
+          August - November was the most popular months in the year of 2023 with
+          December having the lowest volume of riders.
+        </figcaption>
         <br /><br />
         <img src="images/bike/one.png" alt="one" width="600" height="500" />
-        <figcaption></figcaption>
+        <figcaption>
+          For the year of 2023 I wanted to see what our peak hours would be and
+          we found that 5Pm was the most popular time to ride with over 20000
+          riders throughout the year. 1Pm - 6Pm was the most busy hours with
+          20000+ riders in the year and the lowest volume of riders was at 4Am.
+          Our x-axis begins from 0 - 23 and for time this translates to Midnight
+          - 11Pm.
+        </figcaption>
       </section>
       <section id="insights">
         <h2>Insights/Recommendations</h2>
         <p></p>
         <ul>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>
+            2018 has the most volume of trips with almost 400,000 trips for the
+            year
+          </li>
+          <br />
+          <li>August - November of 2023 contained the most volume of trips</li>
+          <br />
+          <li>
+            The most popular hours of bike trips in 2023 was from 1Pm - 6Pm with
+            5Pm having the most volume
+          </li>
+          <br />
+          <li>
+            21st speedway pcl, dean keeton speedway, ziller park and others are
+            the most popular start/end stations so we need to maintain and
+            update these stations due to the heavy volume it receives
+          </li>
+          <br />
+          <li>
+            Majority of riders throughout the years ride for 2 - 100 minutes
+          </li>
+          <br />
+          <li>
+            I recommend to drop the ride scout single ride subscription due to
+            not having much usage and utilize specials for more bike use
+          </li>
         </ul>
       </section>
 
