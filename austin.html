@@ -9,37 +9,95 @@
     <link rel="stylesheet" href="style/HTMLStyle.css" />
   </head>
   <body>
+    <script>
+      fetch("table.csv")
+        .then((response) => response.text())
+        .then((data) => {
+          const rows = data.split("\n");
+          const headers = rows[0].split(",");
+
+          const table = document.getElementById("table");
+          const thead = table.querySelector("thead");
+          const tbody = table.querySelector("tbody");
+
+          headers.forEach((header) => {
+            const th = document.createElement("th");
+            th.textContent = header;
+            thead.querySelector("tr").appendChild(th);
+          });
+
+          for (let i = 1; i < rows.length; i++) {
+            const rowData = rows[i].split(",");
+            if (rowData.length === headers.length) {
+              const tr = document.createElement("tr");
+              rowData.forEach((cellData) => {
+                const td = document.createElement("td");
+                td.textContent = cellData;
+                td.style.padding = "10px"; // Add padding to each cell
+                tr.appendChild(td);
+              });
+              tbody.appendChild(tr);
+            }
+          }
+        });
+    </script>
     <div class="container">
       <a href="index.html" class="previous"> &larr;</a>
       <h1>Austin Bikeshare Analysis</h1>
       <h3>
         Presented by: Bladimir Nunez <br />
-        Last Updated: May 6, 2024
+        Last Updated: May 8, 2024
       </h3>
-      <img src="images/" alt="one" width="760" height="600" />
       <section id="introduction">
         <h1>Project Overview</h1>
-        <p></p>
-        <a href="">Visit GitHub Code!</a>
-        <br />
-        <a href="">Visit Tableau Dashboard!</a>
+        <p>
+          In this project I analyze bikeshare trips in the city of Austin,TX
+          from 2013 - 2024. In the year 2024 our data is only updated up until
+          February. In this project the goals are listed down below:
+          <br />
+          1.) Analyze bike trip durations to understand average trip lengths and
+          peak usage times.
+          <br />
+          2.) Identify popular start and end stations to optimize bike
+          distribution and station maintenance.
+          <br />
+          3.) Explore subscriber types to understand user demographics and
+          preferences.
+          <br />
+          4.) Visualize bike usage trends over time to identify seasonal
+          variations.
+        </p>
+        <a
+          href="https://github.com/BladNunez/DataAnalysis/blob/main/Austin-Bikeshare-Analysis.ipynb"
+          >Visit GitHub Code!</a
+        >
       </section>
 
       <section id="eda">
         <h1>Exploratory Data Analysis (Data Visualization)</h1>
-        <p>
-          <b>1. </b>
-        </p>
-        <img src="" alt="one" width="700" height="600" />
+        <img src="images/bike/two.png" alt="one" width="600" height="500" />
         <figcaption></figcaption>
         <br /><br />
-        <p>
-          <b>2. </b>
-        </p>
-        <img src="" alt="one" width="750" height="550" />
+        <img src="images/bike/four.png" alt="one" width="650" height="500" />
+        <figcaption></figcaption>
+        <br /><br />
+        <img src="images/bike/3.png" alt="one" width="650" height="500" />
+        <figcaption></figcaption>
+        <br /><br />
+        <table id="table">
+          <thead align="left">
+            <tr></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <figcaption></figcaption>
+        <br /><br />
+        <img src="images/bike/5.png" alt="one" width="700" height="500" />
+        <figcaption></figcaption>
+        <br /><br />
+        <img src="images/bike/one.png" alt="one" width="600" height="500" />
         <figcaption></figcaption>
       </section>
-
       <section id="insights">
         <h2>Insights/Recommendations</h2>
         <p></p>
@@ -52,32 +110,45 @@
 
       <section id="data-sources">
         <h2>Data Sources</h2>
-        <p></p>
-        <a href=" ">Dataset</a>
+        <p>
+          I used the Austin bikeshare dataset from Google BigQuery. I was able
+          to connect to Google BigQuery using a client object from the
+          google.cloud library and running a query in python to be able to load
+          the dataset into a pandas dataframe to begin analysis.
+        </p>
+        <a
+          href="https://data.austintexas.gov/Transportation-and-Mobility/Austin-MetroBike-Trips/tyfh-5r8s/about_data"
+          >Dataset</a
+        >
       </section>
 
       <section id="technologies-used">
         <h2>Technologies Used</h2>
-        <p></p>
+        <p>Python(Pandas,Matplotlib,Numpy,BigQuery)</p>
       </section>
 
       <section id="datacleaning">
         <h2>Data Cleaning</h2>
         <ul>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>
+            Create new column for date and split date and timestamp data to be
+            separate
+          </li>
+          <li>
+            Clean and remove unnecessary wording in
+            start_station_name/end_station_name columns
+          </li>
         </ul>
       </section>
-
-      <section id="datacleaning">
-        <h2>Feature Engineering</h2>
-        <p></p>
-      </section>
-
       <section id="challenges">
         <h2>Challenges</h2>
-        <p></p>
+        <p>
+          One challenge I ran into was cleaning out the data that was in my
+          station name columns. In the start column there was stations that were
+          the same name but either in diffrent order or in one word in some
+          cases. I manually went into the data and fixed each one by one so my
+          data was consistent and my analysis accurate.
+        </p>
       </section>
     </div>
   </body>
