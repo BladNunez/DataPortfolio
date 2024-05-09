@@ -61,9 +61,9 @@ body {
       }
       
       #about p {
-        line-height: 1.6;
+        line-height: 1.5;
         color:darkslategray;
-        font-size: 18px;
+        font-size: 16px;
       }
       
       /* Projects Section Styles */
