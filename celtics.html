@@ -14,38 +14,92 @@
       <h1>Boston Celtics Team Points Prediction</h1>
       <h3>
         Presented by: Bladimir Nunez <br />
-        Last Updated: May 8, 2024
+        Last Updated: May 13, 2024
       </h3>
       <section id="introduction">
         <h1>Project Overview</h1>
-        <p></p>
+        <p>
+          In this project I webscrape 10 seasons worth of game data for the
+          Boston Celtics. I use the data to be able to create a linear
+          regression model using the historical game data to be able to predict
+          points in a game for the team using predictive variables such as
+          (field goals, field goal %, 3 pointers, 3 point percentage, free
+          throw, free throw %, assists, opponent points) and my target variable
+          of points(Tm).
+        </p>
         <a href="">Visit GitHub Code!</a>
       </section>
       <section id="eda">
         <h1>Exploratory Data Analysis (EDA)</h1>
+        <img src="images/celts/scat1.png" width="550" height="500" />
+        <figcaption>
+          Here I use a jointplot that consists of both a scatter plot to compare
+          two variables to show correlation and as well as a histogram to show
+          distrubution of each variable. The histogram on the top of the graph
+          represents the distrubution of 3 point attempts while the histogram on
+          the right represents distrubution of points in a game. In our scatter
+          plot we see there is a little correlation between 3 point attempts and
+          points in games over our 10 seasons.
+        </figcaption>
+        <br />
+        <img src="images/celts/scat2.png" width="550" height="500" />
+        <figcaption>
+          Again we use a joint plot to show both correlation and distrubution of
+          field goals and points in a game variables. We see that there is a
+          positive correlation between these two variables such as the more
+          field goals there are the more points will be scored in a game.
+        </figcaption>
       </section>
       <section id="insights">
-        <h2>Insights</h2>
-        <ul>
-          <li></li>
-        </ul>
+        <h2>Linear Regression Model</h2>
+        <img src="images/celts/prediction.png" width="550" height="500" />
+        <figcaption>
+          After splitting my data into testing and training sets we use another
+          scatter plot to compare the prediction models values and the actual
+          values from our dataset. We see that our predictive values are very
+          accurate to the actual values of our dataset. For example to show the
+          performance of the model:
+          <br />
+          Mean Absolute Error: 1.344
+          <br />
+          Mean Squared Error: 3.492
+          <br />
+          R-Squared Score (R2): 1
+        </figcaption>
       </section>
       <section id="data-sources">
         <h2>Data Sources</h2>
-        <p></p>
-        <a href="">Link to Site</a>
+        <p>
+          I used 10 seasons worth of Boston Celtics game data from the
+          basketball reference website.
+        </p>
+        <a href="https://www.basketball-reference.com/teams/BOS/2024/gamelog/"
+          >Link to Site</a
+        >
       </section>
       <section id="technologies-used">
         <h2>Technologies Used</h2>
-        <p>Python(Pandas, Matplotlib, Scikit-Learn, BeautifulSoup)</p>
+        <p>Python(Pandas, Matplotlib, Scikit-Learn, Seaborn)</p>
       </section>
       <section id="datacleaning">
         <h2>Data Cleaning/Preprocessing</h2>
-        <p></p>
+        <ul>
+          <li>Rename Columns</li>
+          <li>Drop Unneeded Columns</li>
+          <li>Convert numeric columns to int/float data types</li>
+          <li>Fill In NULL rows with values</li>
+        </ul>
       </section>
       <section id="challenges">
         <h2>Challenges</h2>
-        <p></p>
+        <p>
+          This was my first project creating a model. My challenges here were
+          learning more about linear regression models and what factors are used
+          to be able to monitor if the model is accurate or not such as mean
+          absolute error and mean square error. Another challenge was taking
+          some time to understand the syntax of using the SkLearn library to
+          create and fit my model to then predict my target value.
+        </p>
       </section>
     </div>
   </body>
