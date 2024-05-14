@@ -19,13 +19,13 @@
       <section id="introduction">
         <h1>Project Overview</h1>
         <p>
-          In this project I webscrape 10 seasons worth of game data for the
-          Boston Celtics. I use the data to be able to create a linear
+          In this project I webscrape 10 seasons worth of historical game data
+          for the Boston Celtics. I use the data to be able to create a linear
           regression model using the historical game data to be able to predict
           points in a game for the team using predictive variables such as
-          (field goals, field goal %, 3 pointers, 3 point percentage, free
-          throw, free throw %, assists, opponent points) and my target variable
-          of points(Tm).
+          (field goals, field goal %, 3 pointers, 3 point %, free throw, free
+          throw %, assists, opponent points) and my target variable of
+          points(Tm) that I want to predict.
         </p>
         <a href="">Visit GitHub Code!</a>
       </section>
@@ -65,6 +65,16 @@
           Mean Squared Error: 3.492
           <br />
           R-Squared Score (R2): 1
+          <br />
+          Where Mean absolute error indicates on average how close your models
+          predictions are to the actual values of the dataset. Due to our MAE
+          being low that means the model is making predictions with very high
+          precision. The Mean squared error is how close the predictions values
+          are to the actual values with very little error. R2 indicates if the
+          model predicts the target variable and due to our R2 being 1 that
+          means are data fits perfectly in the model. The last value in my
+          predictions was 107 for points scored in a game. The actual points in
+          the first game of the 2024 season was 108.
         </figcaption>
       </section>
       <section id="data-sources">
