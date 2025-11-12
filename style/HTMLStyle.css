@@ -17,7 +17,7 @@ body {
         display:block;
         max-height: 300px; /* Set the maximum height for the tbody */
         overflow-y: auto; /* Add a vertical scrollbar if necessary */
-        width: 500px;
+        width: 302px;
         border: 2px solid black;
         border-radius: 5px;
     }

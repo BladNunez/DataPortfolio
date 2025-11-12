@@ -14,6 +14,62 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <style>
+      /* CSS to align headers and table body */
+      #csvTableContainer table {
+        border-collapse: collapse;
+        width: 40%;
+        margin: 10px 0;
+        /* Key property for alignment */
+        table-layout: fixed;
+      }
+      #csvTableContainer th,
+      #csvTableContainer td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+        word-wrap: break-word;
+      }
+      #csvTableContainer th {
+        background-color: #f2f2f2;
+      }
+
+      #rebounds table {
+        border-collapse: collapse;
+        width: 40%;
+        margin: 10px 0;
+        /* Key property for alignment */
+        table-layout: fixed;
+      }
+      #rebounds th,
+      #rebounds td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+        word-wrap: break-word;
+      }
+      #rebounds th {
+        background-color: #f2f2f2;
+      }
+
+      #assists table {
+        border-collapse: collapse;
+        width: 40%;
+        margin: 10px 0;
+        /* Key property for alignment */
+        table-layout: fixed;
+      }
+      #assists th,
+      #assists td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+        word-wrap: break-word;
+      }
+      #assists th {
+        background-color: #f2f2f2;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -75,10 +131,10 @@
           Demonstrated
         </h1>
         <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>Data Cleaning & Inspection</li>
+          <li>Window Functions (RANK,LAG,PARTITION BY)</li>
+          <li>Views & Aggregations</li>
+          <li>CTE's</li>
         </ul>
       </section>
       <section id="technologies-used">
@@ -112,18 +168,64 @@
           <li>All statistics columns I converted to Integers/Double</li>
         </ul>
         <h3>Exploratory Analysis</h3>
-        <p></p>
-        <strong><em>Key facts from the data</em></strong>
-        <p></p>
+        <p>
+          Inital EDA includes counting unique amount of players that played in
+          the NBA over 22 seasons and showing ammount of colleges in the dataset
+          alongside NBA teams. We found the number of players each college
+          produced to go to the NBA and showed the percentages of players origin
+          country's across the 22 seasons.
+        </p>
+        <strong><em>Key facts from the data:</em></strong
+        ><br />
+        <i
+          >I found that across the NBA from 1996-2022 83.4% of players are from
+          the USA. Given that the sport was created and played here in the US
+          makes sense for that number to be high. The second most NBA players
+          are from Canada and France covering 1.60% & 1.48% of the league
+          respectively. Kentucky, Duke & North Carolina produced the most NBA
+          players out of any college/University. From this time Kentucky
+          produced 451 players, Duke 410 & North Carolina 355. There are 337
+          colleges that players came from and only 36 current NBA teams. This
+          shows the fierce competiveness of a college athlete trying to make it
+          to the big leagues.
+        </i>
       </section>
       <section id="technologies-used">
         <h1>
           <i class="fa-solid fa-chart-simple fa-lg" style="color: #4f7a28"></i
           >&nbsp;Key Findings
         </h1>
-        <h3>Player Performance Analysis</h3>
-        <h3>Era & Team Comparisons</h3>
-        <h3>MVP & Dream Team</h3>
+        <h3>1. Player Performance Analysis</h3>
+        <ul>
+          <b
+            ><em><li>Efficiency vs. Volume:</li></em></b
+          >
+          <b
+            ><em><li>Most Improved Players:</li></em></b
+          >
+          <pre>Scoring:</pre>
+          <p></p>
+          <pre>Rebounds:</pre>
+          <p></p>
+          <pre>Assists:</pre>
+          <p></p>
+          <b
+            ><em>
+              <li>
+                Leading players in each season for points,rebounds & assists:
+              </li></em
+            ></b
+          >
+          <div id="csvTableContainer"></div>
+          <script src="script.js"></script>
+          <div id="rebounds"></div>
+          <script src="rebs.js"></script>
+          <div id="assists"></div>
+          <script src="ast.js"></script>
+        </ul>
+
+        <h3>2. Era & Team Comparisons</h3>
+        <h3>3. MVP & Dream Team</h3>
       </section>
       <section id="technologies-used">
         <h1>
